@@ -36,7 +36,7 @@ ScrapeVerse addresses all three, and treats the third as the important one.
 ### Phase 1 — Sanitise, then cross-validate
 
 `sanitize_html_for_ai()` reduces a page in seven passes: it lifts the JSON-LD
-first (before the `<script>` tags are destroyed), drops non-content tags
+first (before the `&lt;script&gt;` tags are destroyed), drops non-content tags
 (`script`, `style`, `nav`, `footer`, `form`, `iframe`, `svg`), unwraps inline
 formatting, strips HTML comments, deletes hidden elements (`display:none`,
 `visibility:hidden`, `aria-hidden`, and a list of hidden class names), filters
@@ -109,7 +109,7 @@ environment, never from the source.
 The sanitiser and the trust scorer need no API keys. This runs offline:
 
 ```bash
-git clone <this-repo>
+git clone https://github.com/gray2488/scrapeverse.git
 cd scrapeverse
 pip install -r requirements.txt
 
